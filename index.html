@@ -1,52 +1,512 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Browser</title>
+	<title></title>
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="website" property="og:type" />
+	<meta content="" property="og:description" />
+	<meta content="" property="og:url" />
+	<meta content="images/1_13914446_large.jpg" property="og:image" />
+	<meta content="" property="og:title" />
+	<meta content="" name="description" />
+	<meta charset="utf-8" />
+	<meta content="width=device-width" name="viewport" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
+	<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-button-content {
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1,
+		.bee-row-3 .bee-col-2 .bee-block-2 {
+			font-family: Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+			font-size: 18px
+		}
+
+		body {
+			background-color: #ffffff;
+			color: #000000;
+			font-family: Arial, Helvetica, sans-serif
+		}
+
+		a {
+			color: #7747ff
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		p {
+			margin: 0
+		}
+
+		.bee-row-content {
+			max-width: 1440px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content .bee-col-w2 {
+			flex-basis: 16.6666666667%
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33.3333333333%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-button a,
+		.bee-icon .bee-icon-label-right a,
+		.bee-menu ul li a {
+			text-decoration: none
+		}
+
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-1 .bee-block-5,
+		.bee-row-3 .bee-col-1 .bee-block-1 {
+			width: 100%
+		}
+
+		.bee-row-1 .bee-col-3 .bee-block-1 a,
+		.bee-row-2 .bee-col-1 .bee-block-2 h1,
+		.bee-row-2 .bee-col-1 .bee-block-3 {
+			direction: ltr;
+			font-family: Montserrat, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-menu ul.bee-horizontal li {
+			display: inline-block
+		}
+
+		.bee-paragraph {
+			overflow-wrap: anywhere
+		}
+
+		.bee-social .icon img {
+			max-height: 32px
+		}
+
+		.bee-row-1,
+		.bee-row-2 {
+			background-color: #fffcf6;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000;
+			padding-bottom: 20px;
+			padding-top: 20px
+		}
+
+		.bee-row-1 .bee-col-1,
+		.bee-row-1 .bee-col-2,
+		.bee-row-1 .bee-col-3 {
+			padding-bottom: 5px;
+			padding-top: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 {
+			color: #282828;
+			font-weight: 600;
+			padding: 10px;
+			text-align: left
+		}
+
+		.bee-row-1 .bee-col-3 .bee-block-1,
+		.bee-row-3 .bee-col-2 .bee-block-1 {
+			padding: 10px;
+			text-align: right
+		}
+
+		.bee-row-2 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000000
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-2 {
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 10px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-3,
+		.bee-row-3 .bee-col-1 .bee-block-3,
+		.bee-row-3 .bee-col-2 .bee-block-3 {
+			padding: 10px
+		}
+
+		.bee-row-3 {
+			background-color: #282828;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-4,
+		.bee-row-4 .bee-row-content {
+			background-color: #ffffff;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-3 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000;
+			padding-bottom: 60px;
+			padding-top: 60px
+		}
+
+		.bee-row-3 .bee-col-1,
+		.bee-row-3 .bee-col-2 {
+			padding-bottom: 5px;
+			padding-top: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end
+		}
+
+		.bee-row-3 .bee-col-2 .bee-block-2 {
+			color: #fffcf6;
+			font-weight: 500;
+			letter-spacing: 1px;
+			padding-bottom: 40px;
+			padding-left: 10px;
+			padding-top: 40px;
+			text-align: right
+		}
+
+		.bee-row-4 .bee-col-1,
+		.bee-row-4 .bee-col-1 .bee-block-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-4 .bee-row-content {
+			color: #000000
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 {
+			color: #1e0e4b;
+			font-family: Inter, sans-serif;
+			font-size: 15px;
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 li,
+		.bee-row-3 .bee-col-2 .bee-block-2 li {
+			padding: 5px 10px
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 li a,
+		.bee-row-2 .bee-col-1 .bee-block-3 a {
+			color: #282828
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-2 h1 {
+			color: #282828;
+			font-size: 164px;
+			font-weight: 700;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-3 .bee-block-1 a:hover {
+			background-color: #a3b224 !important;
+			border-bottom: 0 solid transparent !important;
+			border-left: 0 solid transparent !important;
+			border-right: 0px solid transparent !important;
+			border-top: 0 solid transparent !important;
+			color: #282828 !important
+		}
+
+		.bee-row-1 .bee-col-3 .bee-block-1 a {
+			background-color: #c4d334;
+			border-radius: 50px;
+			color: #282828;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 0;
+			line-height: 200%;
+			padding: 10px 20px;
+			width: auto
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-3 {
+			color: #282828;
+			font-size: 20px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-3,
+		.bee-row-3 .bee-col-2 .bee-block-3 {
+			direction: ltr;
+			font-family: Montserrat, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			font-weight: 500;
+			letter-spacing: 0;
+			line-height: 120%
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-3 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-3 .bee-col-2 .bee-block-3 p:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-3 {
+			color: #cbd83b;
+			font-size: 15px;
+			text-align: left
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-3 a {
+			color: #cbd83b
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 .bee-icon-label a {
+			color: #1e0e4b
+		}
+
+		.bee-row-3 .bee-col-2 .bee-block-3 {
+			color: #fffcf6;
+			font-size: 16px;
+			text-align: right
+		}
+
+		.bee-row-3 .bee-col-2 .bee-block-2 li a,
+		.bee-row-3 .bee-col-2 .bee-block-3 a {
+			color: #fffcf6
+		}
+
+		@media (max-width:768px) {
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-1 .bee-row-content {
+				padding: 25px 0 60px !important
+			}
+
+			.bee-row-3 .bee-row-content {
+				padding: 60px 0 !important
+			}
+
+			.bee-row-1 .bee-col-1 .bee-block-1 img,
+			.bee-row-3 .bee-col-1 .bee-block-1 img {
+				float: none !important;
+				margin: 0 auto !important
+			}
+
+			.bee-row-2 .bee-col-1 .bee-block-1 {
+				height: 40px !important
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 {
+				padding: 10px 5px 5px !important;
+				text-align: center !important
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 li,
+			.bee-row-3 .bee-col-2 .bee-block-2 li {
+				font-size: 15px !important;
+				line-height: auto !important
+			}
+
+			.bee-row-2 .bee-col-1 .bee-block-2 {
+				padding: 10px 10px 0
+			}
+
+			.bee-row-2 .bee-col-1 .bee-block-2 h1 {
+				font-size: 132px
+			}
+
+			.bee-row-1 .bee-col-3 .bee-block-1,
+			.bee-row-1 .bee-col-3 .bee-block-1 .bee-button-content {
+				text-align: center !important
+			}
+
+			.bee-row-3 .bee-col-1 .bee-block-1 {
+				padding: 0 10px !important
+			}
+
+			.bee-row-3 .bee-col-1 .bee-block-2 {
+				height: 10px !important
+			}
+
+			.bee-row-3 .bee-col-2 .bee-block-1 {
+				padding: 10px 10px 5px !important;
+				text-align: center !important
+			}
+
+			.bee-row-3 .bee-col-1 .bee-block-3,
+			.bee-row-3 .bee-col-2 .bee-block-3 {
+				text-align: center !important;
+				font-size: 12px !important
+			}
+
+			.bee-row-3 .bee-col-2 .bee-block-2 {
+				padding: 10px 0 10px 10px !important;
+				text-align: center !important
+			}
+		}
+	</style>
 </head>
 
 <body>
-  <h1>
-    MATT RANKS
-  </h1>
-  <p>
-    PU PU PU PU PU PU PU PU PU 
-  </p>
-  <p>
-    Once upon a time in the picturesque town of Rankville, there lived a young boy named Matt Rank. Now, before I delve into the fascinating tale that surrounds this peculiar surname, allow me to assure you that Matt Rank did not Rank; he was, in fact, quite an extraordinary individual with a heart full of kindness and ambition.
-
-Matt's parents, Mr. and Mrs. Rank, were renowned for their generosity and wit around town. They owned a popular local bakery named "The Cookie Crumble," which was known far and wide for its delightful treats that put smiles on everyone's faces. Matt grew up in this warm, loving environment, where he learned the importance of kindness and humility.
-
-As years passed, Matt blossomed into a handsome young man with striking features, dark hair, and piercing green eyes that seemed to hold the depths of an enchanted forest within them. His charming personality and genuine smile could make anyone's day brighter. However, despite his good looks, many townsfolk couldn't help but snicker when they heard his last name, "Rank."
-
-One fateful day, Matt stumbled upon a peculiar item at the local junkyard � an ancient-looking brass compass with intricate engravings and a mysterious aura that seemed to pull him in closer. Entranced by its beauty, he decided to keep it. Little did he know that this seemingly ordinary trinket would soon set off a chain of events that would change his life forever.
-
-That very night, Matt had an unsettling dream. He found himself in the center of a dark and desolate forest with only the compass as his guide. As he journeyed deeper into the woods, he discovered that the once-familiar landscape was now inhabited by twisted creatures, grotesque monstrosities, and ghostly apparitions. The air reeked of decay and despair, making it nearly impossible for Matt to bear.
-
-Matt's compass seemed to beckon him further into the darkness, guiding him through treacherous terrains and towards a menacing figure that loomed over the town like a shadowy specter. The horrifying creature was none other than his own reflection�a foul beast wearing Matt's face, with sinister eyes and an evil grin that sent shivers down his spine.
-
-Matt awoke from his nightmare, drenched in cold sweat and filled with a deep sense of dread. He immediately noticed that the once-beloved compass now lay in his hands, glowing ominously in the darkness of his room. Unnerved by the unsettling turn of events, Matt decided to investigate the origins of this peculiar object.
-
-As he delved into researching the compass, he discovered a prophecy that spoke of a cursed artifact capable of unleashing unimaginable chaos and destruction upon the world. The only way to break the curse was for someone named "Matt Rank" to harness the power of the compass and use it to vanquish the evil spirit that haunted his dreams.
-
-Terrified but determined, Matt set out on a quest to discover how he could utilize this mysterious compass and fulfill his destiny. Along the way, he encountered a diverse cast of characters who either assisted him or tried to hinder his progress, including a wise old wizard with a mischievous sense of humor, an enchanting sorceress with secrets of her own, and a ragtag group of unlikely heroes that formed an unbreakable bond.
-
-Matt's journey took him through perilous landscapes filled with treacherous traps and deceptive adversaries. Each time he faced a new challenge, he drew strength from his friends, family, and the memories of his loving parents who had always believed in him. Despite numerous setbacks and moments of doubt, Matt's unwavering resolve to break the curse drove him forward.
-
-Finally, Matt arrived at the source of the darkness�a hidden lair deep within the heart of the forest, where the monstrous creature awaited him. With his friends by his side and the compass glowing with ancient power, Matt confronted the beast in a climactic battle that shook the very foundations of Rankville.
-
-In the end, it was Matt's boundless courage and unwavering faith in the goodness within himself that allowed him to harness the power of the compass and vanquish the darkness once and for all. The townspeople rejoiced as their beloved friend had saved them from a fate worse than death, and the Rank family name was forever etched into the annals of legend and folklore.
-
-And so, Matt Rank, who never stank but instead radiated kindness and hope, became an enduring symbol of courage and resilience in the face of overwhelming darkness. His tale would be passed down through generations as a reminder that even the most unlikely heroes can rise above adversity and change the world for the better.
-
-  </p>
-  <p>
-    He also forgot to play squerrel girl in marvel rivals when i asked him to :<span>&#40;</span> . HE PROMISED
-  </p>
-  <script src="script.js"></script>
+	<div class="bee-page-container">
+		<div class="bee-row bee-row-1">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w2">
+					<div class="bee-block bee-block-1 bee-image"><img alt="placeholder logo" class="bee-autowidth" src="images/2_Bright_Logo_LP.png" style="max-width:192px;" title="placeholder logo" /></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-menu">
+						<nav class="bee-menu">
+							<ul class="bee-horizontal">
+								<li><a href="www.example.com" target="_self" title="">Features</a></li>
+								<li><a href="www.example.com" target="_self" title="">Download</a></li>
+								<li><a href="www.example.com" target="_self" title="">Pricing</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-button"><a class="bee-button-content" href="www.sample.com" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Matt ranks</span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-2">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-spacer">
+						<div class="spacer" style="height:250px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h1><span class="tinyMce-placeholder">MATT RANKS</span> </h1>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p>PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU PU</p>
+					</div>
+					<div class="bee-block bee-block-4 bee-spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+					<div class="bee-block bee-block-5 bee-image"><img alt="element image" class="bee-center bee-autowidth" src="images/3_Bright_Elements_LP.png" style="max-width:894px;" title="element image" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-3">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="placeholder logo - footer" class="bee-autowidth" src="images/4_Bright_ClosingLogo_LP.png" style="max-width:628px;" title="placeholder logo - footer" /></div>
+					<div class="bee-block bee-block-2 bee-spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p>© 2025 BRIGHTFLOW All RIGHTS RESERVED.</p>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-social">
+						<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="www.facebook.com" target="_self"><img alt="Facebook" src="images/5_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="www.twitter.com" target="_self"><img alt="Twitter" src="images/6_twitter2x.png" title="twitter" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="www.linkedin.com" target="_self"><img alt="Linkedin" src="images/7_linkedin2x.png" title="linkedin" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="www.instagram.com" target="_self"><img alt="Instagram" src="images/8_instagram2x.png" title="instagram" /></a></span></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-menu">
+						<nav class="bee-menu">
+							<ul class="bee-horizontal">
+								<li><a href="www.example.com" target="_self" title="">Home</a></li>
+								<li><a href="www.example.com" target="_self" title="">Features</a></li>
+								<li><a href="www.example.com" target="_self" title="">Download</a></li>
+								<li><a href="www.example.com" target="_self" title="">Pricing</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p>Privacy Policy  <span style="color: #cbd83b;">|</span>  Terms of Conditions</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-4">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div>
+							<div class="bee-icon bee-icon-last">
+								<div class="bee-content">
+									<div class="bee-icon-image"><a href="https://designedwithbeefree.com/" target="_blank" title="Designed with Beefree"><img alt="Beefree Logo" height="32px" src="images/9_Beefree-logo.png" width="auto" /></a></div>
+									<div class="bee-icon-label bee-icon-label-right"><a href="https://designedwithbeefree.com/" target="_blank" title="Designed with Beefree">Designed with Beefree</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
